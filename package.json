@@ -1,1 +1,22 @@
-{"name":"super-hub","version":"1.0.0","description":"Super Hub microservice for the Aku platform.","main":"src/index.js","scripts":{"start":"node src/index.js","dev":"nodemon src/index.js","build":"echo \"No build step\"","test":"jest"},"dependencies":{"express":"^4.18.2","uuid":"^9.0.1"},"devDependencies":{"jest":"^29.0.0","supertest":"^6.3.0","nodemon":"^3.0.0"}}
+{
+  "name": "super-hub",
+  "version": "1.0.0",
+  "description": "Super Hub microservice for the Aku platform.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "build": "echo 'No build step'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "nodemon": "^3.0.0"
+  }
+}
