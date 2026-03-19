@@ -37,3 +37,5 @@ See `.github/workflows/ci.yml` for CI/CD pipeline.
 
 ## License
 MIT
+# Aku-SuperHub
+Features - REST API for orchestration and analytics - Scalable Node.js backend
