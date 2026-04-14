@@ -6,10 +6,9 @@ from datetime import datetime, timezone
 from unittest.mock import patch
 from uuid import UUID, uuid4
 
-import pytest
 from httpx import AsyncClient
 
-from app.schemas.fleet import EdgeHub, EdgeHubHealth, HubHealthMetrics, HubStatus
+from app.schemas.fleet import EdgeHub, HubHealthMetrics, HubStatus
 
 
 def _make_hub(hub_id: UUID | None = None, status: HubStatus = HubStatus.ONLINE) -> EdgeHub:
