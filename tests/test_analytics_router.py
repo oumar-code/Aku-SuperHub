@@ -49,7 +49,6 @@ async def test_aggregate_analytics_success(client: AsyncClient) -> None:
     assert data["inserted"] == 1
 
 
-
 async def test_get_analytics_summary_success(client: AsyncClient) -> None:
     mock_summary = _make_summary()
     with patch("app.routers.analytics._compute_regional_summary", return_value=mock_summary):
@@ -58,7 +57,6 @@ async def test_get_analytics_summary_success(client: AsyncClient) -> None:
     data = response.json()
     assert data["region"] == "us-east-1"
     assert data["total_learners"] == 100
-
 
 
 async def test_get_analytics_summary_custom_window(client: AsyncClient) -> None:
