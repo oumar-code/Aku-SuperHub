@@ -2,10 +2,8 @@
 
 from __future__ import annotations
 
-import asyncio
 from uuid import UUID
 
-import pytest
 from httpx import AsyncClient
 
 from app.routers.models import FineTuneRequest, FineTuneStatus, _run_finetune_job
