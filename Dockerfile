@@ -51,6 +51,13 @@ USER aku
 EXPOSE 8000
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-    CMD python -c "import urllib.request,sys; urllib.request.urlopen('http://localhost:8000/health', timeout=4); sys.exit(0)"
+    CMD python - <<'EOF'
+import urllib.request, sys
+try:
+    urllib.request.urlopen("http://localhost:8000/health", timeout=4)
+    sys.exit(0)
+except Exception:
+    sys.exit(1)
+EOF
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
